@@ -128,11 +128,12 @@ Paddings(sizes)
 
 
 // ==========
-
+.flex_wr
+  flex-wrap wrap
 .flex_col
   flex-direction column
 
-.flex_col, .flex
+.flex_col, .flex, .flex_wr
   display flex
 
 .x_start
@@ -164,3 +165,16 @@ Paddings(sizes)
 
 .y_base
   align-items baseline
+
+
+.fr_1
+  flex 1
+.fr_2
+  flex 2
+.fr_3
+  flex 3
+
+
+.BR
+  flex-basis 100%
+  height 0

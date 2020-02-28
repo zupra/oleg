@@ -4,16 +4,18 @@ div
 
 
   #CrossFade
-    each img in ['https://manceraparfums.com/themes/mancera2016/img/wild_python_mid1.jpg','https://manceraparfums.com/themes/mancera2016/img/home_roses_vanille_small.jpg','https://manceraparfums.com/themes/mancera2016/img/home_black_gold_medium.jpg']
+    each img in ['https://obj.altapress.ru/picture/555164/936x530.jpg','https://ratatum.com/wp-content/uploads/2018/05/47417-2.jpg','https://manceraparfums.com/themes/mancera2016/img/wild_python_mid1.jpg','https://manceraparfums.com/themes/mancera2016/img/home_roses_vanille_small.jpg','https://manceraparfums.com/themes/mancera2016/img/home_black_gold_medium.jpg']
       img(src=''+img, alt="img")
 
     .intro.bold
       h1.bold
-        span С днем рождения дружище !!!
-      h4.bold
-        span
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis impedit facilis nesciunt quam vitae voluptatibus ullam vero.
-
+        span.sp1 Оригинальная 
+          br 
+          | парфюмерия из Франции
+      h3
+        span.sp2 Ароматы, они как страницы из личного дневника. 
+          br
+          | C его тайнами и мыслями.
   #grid
     -for(i=1;i<5;i++)
       .mask(class='col_'+i)
@@ -36,107 +38,21 @@ div
 
     img(src="https://manceraparfums.com/themes/mancera2016/img/home_hair_mist_small.jpg", alt="")
 
-
-
-
-
-  #footer
-    #footer-wrap
-
-      .flex.x_sb
-        form.mr-5(ref="ftr_form")
-          input.mb-2(type="text", name="entry.1694504546", placeholder="* Телефон")
-          textarea(name="entry.1527676226", placeholder="Сообщение")
-          button.btn(@click.prevent="submit()") Отправить
-
-        div
-          h4 Eсть вопросы или предложения?
-          p Оставьте сообщение которое сразу придёт нам в SMS. Если это важно или интересно — мы оперативно ответим.
-          h4 Пообщаемся в СоцСетях?
-          .Socials-set
-            a(href="//vk.com/#")
-              svg.icon
-                use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#icon_vk')
-              //| vkontakte
-            a(href="//facebook.com/#")
-              svg.icon
-                use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#icon_fb')
-              //| facebook
-            a(href="//instagram.com/#")
-              svg.icon
-                use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#icon_instagram')
-              //| instagram
-      .flex.x_sb
-        .nav
-          h4 OOO «
-            b ВИНСТОН
-            |»
-          | г. Москва, Покровка 3/7
-          br
-          | тел.: +7(495) 64-255-64
-          br
-          | режим работы: Пн-Пт
-          br
-          | с 10-20 часов
-          br
-          | Сб-Вс - выходной
-        nav
-          h4 Инфо
-          nuxt-link(to="/#") О компании
-          a(href="/#") Обмен и возврат
-          nuxt-link(to="/#") Отзывы
-          nuxt-link(to="/contacts") Контакты
-          nuxt-link(to="/cooperation") Сотрудничество
-          a(href="#") Узнать статус заказа
-          // a(href="#") Контакты
-          // a(href="#") Отзывы о ремонте
-          // a(href="#") Сотрудничество
-        div
-          nav.Socials-set
-            h4 Поделиться
-            a(href="/#")
-              svg.icon
-                use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#icon_twitter')
-              | share twitter
-            a(href="/#")
-              svg.icon
-                use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#icon_vk')
-              | share vkontakte
-            a(href="/#")
-              svg.icon
-                use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#icon_fb')
-              | share facebook
-            a(href="/#")
-              svg.icon
-                use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#icon_googleplus')
-              | share Gplus
-            a(href="/#")
-              svg.icon
-                use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#icon_ok')
-              | share odnoklassniki
-
-
-  <SocIcon/>
-
-
-
+  <Footer/>
 
 </template>
 
 
 
 <script>
-import SocIcon from '~/components/SocIcon.vue';
+import Footer from '~/components/Footer.vue'
 export default {
-
   components: {
-    SocIcon
+    Footer
   },
-  data () {
-    return {
-    }
+  data() {
+    return {}
   }
-
 }
 </script>
 
@@ -223,58 +139,8 @@ img
 
 
 
-#footer
-  //background-image: linear-gradient( 135deg, #FFCF71 10%, #2376DD 100%);
-  background-image: linear-gradient( 135deg, #FD6585 10%, #0D25B9 100%);
-  padding: 3em 0
-
-  color #EEE
-
-  h2, h4, h4
-    /* font-weight normal */
-    color #FFF
 
 
-  nav, .nav
-    margin 2em 1em
-    a
-      color #cddc39 //$text
-      //text-decoration: $header underline
-
-      display: block
-      //line-height 2em
-      &:hover
-        color #FFF
-
-  /* input, textarea
-    &:focus
-      background: #000;
-      color #FFF */
-
-#footer-wrap
-  max-width: 1080px;
-  margin: auto;
-  padding: 0 1em;
-
-
-
-.Socials-set
-  a
-    white-space nowrap
-    &:hover .icon
-      //background: $header + 20
-      //background: $text
-      background: rgba(#000 .45)
-  .icon
-    border-radius 3px
-    vertical-align: middle;
-    width: 16px
-    height 16px
-    padding: 10px
-    box-sizing: content-box
-    margin 4px
-    fill: #FFF
-    background: rgba(#EEE .2)//$header
 
 
 
@@ -304,7 +170,7 @@ img
 
     animation CrossFade 24s infinite
     &:nth-child(3)
-      animation-delay 2s
+      animation-delay 6s
     &:nth-child(2)
       animation-delay 12s
     &:nth-child(1)
@@ -322,16 +188,37 @@ img
 
 .intro
 
+
+  user-select: none;
+
   position relative
   margin 2em
+  margin-left: 5em;
   padding .2em .6em
   cursor pointer
-  max-width: 50%
+  /* max-width: 600px */
 
-  span
+
+
+  &:before
+    content ''
+    position absolute
+    top -30px
+    left -50px
+    width 100px
+    height 100px
+    border solid 4px #ffed00 //rgba(#ffed00, .6)
+    clip-path polygon(0 0, 0 110px, 40px 110px, 40px 10px, 110px 20px, 110px 0)
+
+
+  .sp1
     /* padding: 0 .3em; */
     /* background: #e91e63 */
-    background: rgba(107,170,184,0.3);
+    background: #ffed0099 // rgba(107,170,184,0.3);
+    /* background rgba(#fd658569,.5) */
 
+
+  .sp2
+    background rgba(#000,.5)
 
 </style>
